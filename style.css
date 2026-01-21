@@ -1,0 +1,279 @@
+/* ============================= */
+/* GLOBAL STYLES */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #ddd;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li a {
+  color: #000;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  color: #555;
+}
+
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 60px;
+  background: #ffffff;
+}
+
+.hero-left {
+  max-width: 55%;
+  animation: slideIn 1.2s ease;
+}
+
+.hero-left h1 span {
+  color: #000;
+}
+
+.tagline {
+  color: #555;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.buttons {
+  margin: 25px 0;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.primary {
+  background: #000;
+  color: #fff;
+}
+
+.secondary {
+  border: 1px solid #000;
+  color: #000;
+}
+
+.stats {
+  display: flex;
+  margin-top: 25px;
+}
+
+.stat {
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+/* PROFILE IMAGE */
+.hero-right img {
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+/* ============================= */
+/* COMMON SECTION STYLES */
+/* ============================= */
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.section-line {
+  width: 80px;
+  height: 4px;
+  background: #000;
+  margin: 15px auto 40px;
+  border-radius: 5px;
+}
+
+/* ============================= */
+/* EXPERIENCE SECTION */
+/* ============================= */
+.experience-section {
+  padding: 100px 60px;
+  background: #f9f9f9;
+}
+
+.sub-title {
+  color: #444;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.experience-card {
+  background: #000;
+  color: #fff;
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+}
+
+.exp-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.company-logo {
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.company-info span {
+  color: #ccc;
+}
+
+/* ============================= */
+/* SKILLS SECTION */
+/* ============================= */
+.skills-section {
+  padding: 100px 60px;
+  background: #ffffff;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.skill-card {
+  background: #000;
+  color: #fff;
+  padding: 30px;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+}
+
+.skill-card span {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 8px 14px;
+  border-radius: 18px;
+  margin: 6px;
+}
+
+/* ============================= */
+/* ACHIEVEMENTS SECTION */
+/* ============================= */
+.achievements-section {
+  padding: 100px 60px;
+  background: #f9f9f9;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.achievement-card {
+  background: #000;
+  color: #fff;
+  padding: 30px;
+  border-radius: 25px;
+}
+
+.badge {
+  background: #fff;
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+}
+
+/* ============================= */
+/* ANIMATION */
+/* ============================= */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skills-grid,
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}
