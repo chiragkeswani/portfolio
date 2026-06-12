@@ -12,12 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.1 });
 
   const hiddenElements = document.querySelectorAll(
-    ".section-title, .about p, .education, .experience-card, .skill-card, .achievement-card, .btn"
+    ".section-title, .about p, .education, .experience-card, .skill-card, .achievement-card, .project-card, .btn"
   );
   hiddenElements.forEach((el) => {
     el.classList.add("scroll-animate");
     // Add tilt class to cards for 3D effect
-    if (el.classList.contains('experience-card') || el.classList.contains('skill-card') || el.classList.contains('achievement-card')) {
+    if (el.classList.contains('experience-card') || el.classList.contains('skill-card') || el.classList.contains('achievement-card') || el.classList.contains('project-card')) {
       el.classList.add('tilt-card');
     }
     observer.observe(el);
